@@ -8,7 +8,7 @@ TotalCharacters=$(echo -n "$text" |grep -o '[a-z]' | wc -l)
 
 
 # count number of words
-word=$(echo -n "$text" | wc -w)
+word=$(echo -n "$text" |sed 's/'[0-9]'/ /g' | wc -w)
 
 
 # Counting Number of total space
